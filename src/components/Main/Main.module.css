@@ -1,0 +1,85 @@
+.main {
+  background-color: #2B2D3C;
+  border-radius: 20px;
+  padding: 40px 40px 0px 40px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.carousel {
+  flex: 1; /* занимает всё доступное пространство по высоте */
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.title h2 {
+  margin-bottom: 16px;
+}
+
+.change {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+}
+
+.subtitle {
+  max-width: 704px;
+  font-weight: 200;
+  font-size: 18px;
+}
+
+.button {
+  margin-top: 32px;
+  width: 274px;
+  background-color: #895AF6;
+  border: none;
+  border-radius: 10px;
+  padding: 18px 59px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.button:hover{
+    background-color: #6C47C2;
+}
+
+.left,
+.right {
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.left img,
+.right img {
+  width: 24px;
+  height: 24px;
+}
+
+.image {
+  margin-top: auto;
+  height: 530px;
+  overflow: hidden;
+  flex-shrink: 0; /* не позволяет картинке сжиматься */
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0 0 20px 20px;
+}
+
+.highlight {
+  color: #895AF6;
+}
+

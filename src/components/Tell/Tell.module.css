@@ -1,0 +1,204 @@
+
+.tell{
+    display: flex;
+    gap: 16px;
+    margin-top: 96px;
+}
+
+.form{
+    padding: 40px;
+    background-color: #2E2E42;
+    max-width: 682px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.fields {
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap; /* позволяет перенос строк */
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.fields input {
+    flex: 1 1 calc(50% - 8px); /* 2 в ряд с отступами */
+    background-color: #2E2E42;
+    border: 1px solid #444;
+    padding: 14px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    box-sizing: border-box;
+    min-width: 0;
+}
+
+.checkbox{
+    display: flex;
+    flex-direction: column;
+}
+
+.field{
+    
+}
+
+
+
+
+.file {
+  margin-top: 40px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.file p {
+  color: #B0AFBD;
+}
+.checkbox {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.allow {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 14px;
+  color: white;
+  line-height: 1.4;
+  cursor: pointer;
+}
+
+.allow input[type="checkbox"] {
+  min-width: 20px;
+  min-height: 20px;
+  margin-top: 2px;
+  accent-color: #895AF6; /* Цвет галочки в современных браузерах */
+  cursor: pointer;
+}
+
+
+
+.fileLabel {
+  display: inline-block;
+  background-color: none;
+  border: 2px solid #895AF6;
+  color: white;
+  padding: 18px 60px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  width: fit-content;
+}
+
+.fileLabel:hover {
+  border-color: #6C47C2;
+}
+
+.fileLabel input[type="file"] {
+  display: none; /* скрываем стандартную кнопку */
+}
+
+
+.button{
+    margin-top: 16px;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #895AF6;
+    gap: 16px;
+    border: none;
+    border-radius: 10px;
+    padding: 18px 90px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 17px;
+    line-height: 28px;
+    
+}
+
+.button:hover{
+    background-color: #6C47C2;
+}
+
+.contacts{
+    background-color: #2E2E42;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 20px;
+    justify-content: space-between;
+}
+.links h2{
+    margin-bottom: 16px;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.telegram{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.tg{
+    background-color: #895AF6;
+    border: none;
+    width: fit-content;
+    padding: 18px 35px;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    gap: 16px;
+    align-items: center;
+     font-size: 17px;
+    line-height: 28px;
+}
+
+.tg:hover{
+    background-color: #6C47C2;
+}
+
+/* Стили ошибки */
+.errorInput {
+  border: 1px solid #ff4d4f !important;
+  color: #ff4d4f;
+}
+
+.errorInput::placeholder {
+  color: #ff4d4f;
+}
+
+/* Неактивная кнопка */
+.disabledButton {
+  background-color: #17192A !important;
+  color: #aaa !important;
+  cursor: not-allowed;
+}
+
+
+
+
+
+
+
+.fields input:-webkit-autofill,
+.fields input:-webkit-autofill:hover,
+.fields input:-webkit-autofill:focus,
+.fields input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0px 1000px #2E2E42 inset !important;
+  -webkit-text-fill-color: white !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+

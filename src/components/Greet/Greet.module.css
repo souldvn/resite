@@ -1,0 +1,50 @@
+.greet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* по горизонтали */
+  align-items: center;       /* по вертикали */
+  height: 100vh;
+  padding-top: 0;            /* убираем старый отступ */
+}
+
+h1 {
+  max-width: 1000px;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 68px;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+}
+
+.highlight {
+  color: #895AF6;
+}
+
+.text{
+    padding-top: 30px;
+    color: #fff;
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+}
+
+.button{
+    margin-top: 20px;
+    width: 274px;
+    background-color: #895AF6;
+    border: none;
+    border-radius: 10px;
+    padding: 18px 59px;
+    color: white;
+    font-weight: 400;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.button:hover{
+    background-color: #6C47C2;
+}

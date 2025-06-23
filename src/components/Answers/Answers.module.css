@@ -1,0 +1,51 @@
+.answers {
+  display: flex;
+  flex-direction: column;
+  margin-top: 96px;
+}
+
+.answers h2 {
+  margin-bottom: 32px;
+}
+
+.blocks {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.block {
+  background-color: #2B2C3C;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 20px;
+  padding: 28px 24px;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answerWrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, transform 0.4s ease, opacity 0.3s ease;
+  transform: translateY(-5px);
+  opacity: 0;
+}
+
+.open .answerWrapper {
+  max-height: 500px; /* Достаточно для длинного текста */
+  transform: translateY(0);
+  opacity: 1;
+  margin-top: 16px;
+}
+
+.answerInner p {
+  color: #B6B7BC;
+}

@@ -1,0 +1,59 @@
+.reason{
+    margin-top: 96px;
+}
+
+.reason h2{
+    margin-bottom: 40px;
+}
+
+h2{
+    font-size: 38px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.highlight{
+    color: #895AF6;
+    
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card {
+  max-width: 580px;
+  width: 100%; /* чтобы можно было адаптировать под max-width */
+  background-color: #2B2C3C;
+  border-radius: 20px 20px 0 0;
+
+  flex: 1 1 580px; /* важно для переноса и соблюдения max-width */
+
+}
+
+.card img{
+    border-radius: 20px 20px 0 0; /* ← добавлено */
+}
+
+.exp{
+    padding: 20px;
+}
+
+.exp p{
+    font-size: 18px;
+    line-height: 28px;
+    font-weight: 300;
+}
+
+.exp h3{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+
+
+
