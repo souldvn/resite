@@ -3,6 +3,10 @@
     width: 100%;
 }
 
+.projects h2{
+   margin-bottom: 32px;
+}
+
 .cards{
     display: flex;
     flex-direction: column;
