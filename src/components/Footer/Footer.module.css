@@ -3,6 +3,7 @@
     margin-bottom: 64px;
     position: relative;
     z-index: 1;
+
 }
 
 
@@ -62,7 +63,7 @@
   /* bottom: -400vh; */
   left: 50%;
   transform: translateX(-50%);
-  width: 80vw;
+  width: 110vw;
   height: 200vw;
   background: radial-gradient(circle, rgba(116, 83, 243, 0.8) 0%, rgba(116, 83, 243, 0) 100%);
   filter: blur(80px);
