@@ -31,6 +31,12 @@
   align-items: center;
 }
 
+.header p {
+    font-size: 22px;
+  line-height: 26px;
+  font-weight: 500;
+}
+
 .answerWrapper {
   max-height: 0;
   overflow: hidden;
@@ -48,4 +54,7 @@
 
 .answerInner p {
   color: #B6B7BC;
+    font-size: 18px;
+  line-height: 26px;
+  font-weight: 500;
 }

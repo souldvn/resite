@@ -9,7 +9,7 @@
 }
 
 .carousel {
-  flex: 1; /* занимает всё доступное пространство по высоте */
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -21,18 +21,33 @@
 
 .title h2 {
   margin-bottom: 16px;
+  max-width: 704px;
 }
 
 .change {
   display: flex;
   gap: 32px;
   align-items: center;
+  justify-content: flex-end;
+  max-width: 140px;
+}
+
+.change button{
+  width: 6px;
+  height: 12px;
+}
+
+.change p {
+  display: inline-block;
+  text-align: center;
+  width: 60px; /* или подбери вручную */
 }
 
 .subtitle {
   max-width: 704px;
-  font-weight: 200;
+  font-weight: 400;
   font-size: 18px;
+  line-height: 28px;
 }
 
 .button {
@@ -46,9 +61,12 @@
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-size: 18px;
+  line-height: 28px;
 }
-.button:hover{
-    background-color: #6C47C2;
+
+.button:hover {
+  background-color: #6C47C2;
 }
 
 .left,
@@ -57,7 +75,13 @@
   border: none;
   padding: 0;
   cursor: pointer;
+  width: 32px; /* Фиксированная ширина */
+  height: 32px; /* Можно тоже добавить для стабильности */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .left img,
 .right img {
@@ -69,7 +93,7 @@
   margin-top: auto;
   height: 530px;
   overflow: hidden;
-  flex-shrink: 0; /* не позволяет картинке сжиматься */
+  flex-shrink: 0;
 }
 
 .image img {
@@ -83,3 +107,10 @@
   color: #895AF6;
 }
 
+/* Стили для неактивных кнопок */
+.disabled img,
+.left:disabled img,
+.right:disabled img {
+  opacity: 0.3;
+  cursor: default;
+}

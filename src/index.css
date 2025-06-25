@@ -5,6 +5,7 @@ body {
   background-color: #080A1C;
   font-family: 'Inter', sans-serif;
   color: #fff;
+
 }
 
 *{
@@ -15,7 +16,10 @@ body {
 
 html {
   scroll-behavior: smooth;
+  /* overflow: hidden; */
 }
+
+
 
 
 

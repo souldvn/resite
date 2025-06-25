@@ -6,12 +6,13 @@
   z-index: 1000;
   transition: 1s ease, backdrop-filter 0.3s ease;
   height: 96px;
+  
 }
 
 .header.scrolled {
-  background-color: rgba(20, 20, 20, 0.4); /* Прозрачный тёмный фон */
-  backdrop-filter: blur(10px);             /* Эффект размытия */
-  -webkit-backdrop-filter: blur(10px);     /* Для Safari */
+  background-color: rgba(20, 20, 20, 0.4);
+  backdrop-filter: blur(10px);             
+  -webkit-backdrop-filter: blur(10px);     
 }
 
 .container {
@@ -22,26 +23,24 @@
   position: relative;
 }
 
-/* Радиальный блюр появляется при скролле */
-.header::before {
-  content: '';
+
+.ellipse {
   position: absolute;
-  top: -370vh;
+  top: -145vw; /* Подбери нужное значение */
   left: 50%;
   transform: translateX(-50%);
-  width: 100vw;
+   width: 100vw;
   height: 200vw;
   background: radial-gradient(circle, rgba(116, 83, 243, 0.8) 0%, rgba(116, 83, 243, 0) 100%);
   filter: blur(80px);
-  z-index: -1;
+  z-index: 0;
   pointer-events: none;
-  opacity: 0;
-  transition: opacity 1s ease-in-out; /* <= Плавное проявление */
 }
 
-.header.scrolled::before {
+
+/* .header.scrolled::before {
   opacity: 1;
-}
+} */
 
 
 
@@ -81,3 +80,5 @@
 .button:hover {
   background-color: #6C47C2;
 }
+
+

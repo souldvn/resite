@@ -1,7 +1,11 @@
 .footer{
     margin-top: 96px;
     margin-bottom: 64px;
+    position: relative;
+    z-index: 1;
 }
+
+
 
 .top{
     display: flex;
@@ -48,5 +52,24 @@
 .bottom p{
      color: #B0AFBD
 }
+
+
+/* Эффект размытого эллипса под футером */
+.footer::after {
+  content: '';
+  position: absolute;
+  top: -50vh;
+  /* bottom: -400vh; */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80vw;
+  height: 200vw;
+  background: radial-gradient(circle, rgba(116, 83, 243, 0.8) 0%, rgba(116, 83, 243, 0) 100%);
+  filter: blur(80px);
+  z-index: -1;
+  pointer-events: none;
+  opacity: 1;
+}
+
 
 

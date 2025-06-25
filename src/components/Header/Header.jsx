@@ -13,6 +13,8 @@ const Header = () => {
   }, []);
 
   return (
+    <>
+    <div className={s.ellipse} />
     <header className={`${s.header} ${scrolled ? s.scrolled : ""}`}>
       <div className="section">
         <div className={s.container}>
@@ -32,6 +34,7 @@ const Header = () => {
         </div>
       </div>
     </header>
+    </>
   );
 };
 

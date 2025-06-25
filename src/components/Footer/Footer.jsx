@@ -3,6 +3,7 @@ import s from "./Footer.module.css";
 const Footer = () => {
   return (
     <div className="section">
+        
       <div className={s.footer}>
         <div className={s.top}>
           <img className={s.logo} src="/icons/logo.svg" alt="logo"></img>
@@ -28,7 +29,7 @@ const Footer = () => {
               <p>Документация</p>
               <ul className={s.opt}>
                 <li>
-                  <a href="#d">Политика конфиденциальности</a>
+                  <a href="#d">Документы</a>
                 </li>
               </ul>
             </div>
@@ -38,7 +39,7 @@ const Footer = () => {
         <div className={s.bottom}>
             <p>ИП Мусин Ринат Русланович</p>
             <p>ИНН: 026827652366/ОГРНИП: 324028000249396</p>
-        </div>
+        </div> 
       </div>
     </div>
   );

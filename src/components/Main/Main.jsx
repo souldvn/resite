@@ -14,7 +14,7 @@ const slides = [
   },
   {
     title: 'Telegram Mini Apps игры',
-    subtitle: 'Разработаем виртуального питомца, увлекательную мини-игру или собственную метавселенную. Знаем как сложную идею упаковать в простое решение.',
+    subtitle: 'Разработаем виртуального питомца, увлекательную мини-игру или собственную метавселенную. Знаем, как сложную идею упаковать в простое и эффективное решение.',
     image: '/images/main3.png'
   },
   {
@@ -28,44 +28,46 @@ const Main = () => {
   const [index, setIndex] = useState(0)
 
   const prevSlide = () => {
-    setIndex((prev) => (prev === 0 ? slides.length - 1 : prev - 1))
+    setIndex((prev) => Math.max(0, prev - 1))
   }
 
   const nextSlide = () => {
-    setIndex((prev) => (prev === slides.length - 1 ? 0 : prev + 1))
+    setIndex((prev) => Math.min(slides.length - 1, prev + 1))
   }
 
   const current = slides[index]
 
   const highlightTitle = (title) => {
-  const parts = title.split(/(Telegram Mini Apps)/i)
-  return parts.map((part, i) =>
-    part.toLowerCase() === 'telegram mini apps' ? (
-      <span key={i} className={s.highlight}>
-        {part}
-      </span>
-    ) : (
-      <React.Fragment key={i}>{part}</React.Fragment>
+    const parts = title.split(/(Telegram Mini Apps)/i)
+    return parts.map((part, i) =>
+      part.toLowerCase() === 'telegram mini apps' ? (
+        <span key={i} className={s.highlight}>{part}</span>
+      ) : (
+        <React.Fragment key={i}>{part}</React.Fragment>
+      )
     )
-  )
-}
-
+  }
 
   return (
-    <div id = "services" className="section">
+    <div id="services" className="section">
       <div className={s.main}>
         <div className={s.carousel}>
           <div className={s.title}>
-            <h2>
-  {highlightTitle(current.title)}
-</h2>
-
+            <h2>{highlightTitle(current.title)}</h2>
             <div className={s.change}>
-              <button className={s.left} onClick={prevSlide}>
+              <button
+                className={`${s.left} ${index === 0 ? s.disabled : ''}`}
+                onClick={prevSlide}
+                disabled={index === 0}
+              >
                 <img src="/icons/arrowleft.svg" alt="arrow left" />
               </button>
               <p>{index + 1} из {slides.length}</p>
-              <button className={s.right} onClick={nextSlide}>
+              <button
+                className={`${s.right} ${index === slides.length - 1 ? s.disabled : ''}`}
+                onClick={nextSlide}
+                disabled={index === slides.length - 1}
+              >
                 <img src="/icons/arrowright.svg" alt="arrow right" />
               </button>
             </div>

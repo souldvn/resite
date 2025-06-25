@@ -92,7 +92,8 @@ const Tell = () => {
                 onChange={handleChange}
               />
               <span>
-                Я ознакомился с политикой конфиденциальности и даю согласие на обработку данных
+                Я ознакомился с политикой конфиденциальности и даю согласие на
+                обработку данных
               </span>
             </label>
 
@@ -116,32 +117,32 @@ const Tell = () => {
           </div>
 
           <button
-  type="submit"
-  className={`${s.button} ${!isValid() ? s.disabledButton : ""}`}
-  onClick={() => {
-    if (!isValid()) setTouched(true);
-  }}
->
-  Отправить
-</button>
-
+            type="submit"
+            className={`${s.button} ${!isValid() ? s.disabledButton : ""}`}
+            onClick={() => {
+              if (!isValid()) setTouched(true);
+            }}
+          >
+            Отправить
+          </button>
         </form>
 
         <div className={s.contacts}>
-          <div className={s.links}>
+          <div className={s.contactInfo}>
             <h2>Контакты</h2>
             <p>+7 999 757-04-99</p>
             <p>redigital.agency@gmail.com</p>
             <p>redigital.agency@yandex.ru</p>
           </div>
-          <div className={s.telegram}>
-            <h3>Написать в Telegram</h3>
+
+          <div className={s.contactForm}>
+            <h2>Написать в Telegram</h2>
             <p>
-              Оставьте заявку — ответим вам в ближайшее время и предложим решение на бесплатной
-              консультации
+              Оставьте заявку — ответим вам в ближайшее время и предложим
+              решение на бесплатной консультации
             </p>
             <button className={s.tg}>
-              Связвться с нами <img src="/icons/tg.svg" alt="telegram" />
+              Связаться с нами <img src="/icons/tg.svg" alt="telegram" />
             </button>
           </div>
         </div>
