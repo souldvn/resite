@@ -17,11 +17,14 @@
 .title {
   display: flex;
   justify-content: space-between;
+  text-align: left;
+  flex-wrap: wrap;
 }
 
 .title h2 {
   margin-bottom: 16px;
   max-width: 704px;
+  color: white;
 }
 
 .change {
@@ -32,7 +35,7 @@
   max-width: 140px;
 }
 
-.change button{
+.change button {
   width: 6px;
   height: 12px;
 }
@@ -40,7 +43,7 @@
 .change p {
   display: inline-block;
   text-align: center;
-  width: 60px; /* или подбери вручную */
+  width: 60px;
 }
 
 .subtitle {
@@ -48,6 +51,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 28px;
+  color: white;
 }
 
 .button {
@@ -75,13 +79,12 @@
   border: none;
   padding: 0;
   cursor: pointer;
-  width: 32px; /* Фиксированная ширина */
-  height: 32px; /* Можно тоже добавить для стабильности */
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
 
 .left img,
 .right img {
@@ -90,8 +93,7 @@
 }
 
 .image {
-  margin-top: auto;
-  height: 530px;
+  margin-top: 0;
   overflow: hidden;
   flex-shrink: 0;
 }
@@ -107,10 +109,95 @@
   color: #895AF6;
 }
 
-/* Стили для неактивных кнопок */
 .disabled img,
 .left:disabled img,
 .right:disabled img {
   opacity: 0.3;
   cursor: default;
 }
+
+/* --- Адаптив --- */
+/* Общие стили остаются без изменений выше... */
+.desktopOnly {
+  display: flex;
+}
+
+.mobileOnly {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: 24px 20px 0 20px;
+    height: auto;
+    flex-direction: column;
+  }
+
+  .carousel {
+    text-align: left;
+  }
+
+  .title {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .title h2 {
+    font-size: 22px;
+    line-height: 30px;
+    max-width: 100%;
+  }
+
+  .subtitle {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+
+  .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    padding: 18px 69px;
+    margin: 24px auto 0 auto;
+  }
+
+  .change {
+    margin-top: 24px;
+    justify-content: center;
+    max-width: none;
+  }
+
+  .desktopOnly {
+    display: none;
+  }
+
+  .mobileOnly {
+    display: flex;
+  }
+
+  .image {
+  margin-top: 24px;
+  margin-left: 0;
+  margin-right: 0;
+  width: 190vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  transform: translateX(-50%);
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+}
+
+
+

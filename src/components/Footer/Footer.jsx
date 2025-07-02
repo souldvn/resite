@@ -26,10 +26,10 @@ const Footer = () => {
 
           <div className={s.docs}>
             <div className={s.column}>
-              <p>Документация</p>
+              <p>Документы</p>
               <ul className={s.opt}>
                 <li>
-                  <a href="#d">Документы</a>
+                  <a href="#d">Политика конфиденциальности</a>
                 </li>
               </ul>
             </div>

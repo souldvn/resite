@@ -1,24 +1,27 @@
-.auto{
-    margin-top: 96px;
-    background-color: #2B2D3C;
-    display: flex;
-    flex-direction: column;
-    border-radius: 20px;
-    padding: 40px;
+.auto {
+  margin-top: 96px;
+  background-color: #2B2D3C;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 1180px;   /* <-- ограничение по ширине */
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box; /* важно */
 }
 
-.auto h2{
-    font-size: 38px;
-    font-weight: 600;
-    line-height: 40px;
-    margin-bottom: 16px;
+.auto h2 {
+  font-size: 38px;
+  font-weight: 600;
+  line-height: 40px;
+  margin-bottom: 16px;
 }
 
-.auto p{
-    font-size: 18px;
-    font-weight: 400;
-    line-height: 28px;
-
+.auto p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 28px;
 }
 
 .button {
@@ -37,18 +40,63 @@
   line-height: 28px;
 }
 
-.button:hover{
-    background-color: #6C47C2;
+.button:hover {
+  background-color: #6C47C2;
+}
+
+.img {
+  display: flex;
+  gap: 16px;
+  margin-top: 40px;
+  flex-wrap: wrap; /* <-- теперь не вылезут */
+}
+
+.img img {
+  border-radius: 20px;
+  flex: 1 1 0;         /* <-- позволяет им занимать равное пространство */
+  max-width: calc(50% - 8px); /* <-- две картинки в строку с отступом */
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
 }
 
 
-.img{
-    display: flex;
+/* ========================== */
+/* 📱 Адаптив для мобилы ↓↓↓ */
+@media (max-width: 768px) {
+  .auto {
+    padding: 24px 16px;
+  }
+
+  .auto h2 {
+    font-size: 28px;
+    line-height: 32px;
+    margin-bottom: 12px;
+  }
+
+  .auto p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .button {
+    width: 100%;
+    min-width: unset;
+    margin-top: 24px;
+  }
+
+  .img {
+    flex-direction: column;
     gap: 16px;
-    margin-top: 40px;
-}
+    margin-top: 32px;
+  }
 
-.img img{
-    border-radius: 20px;
+  .img img {
+    width: 100%;
+    max-width: 100%;      /* ✅ убирает ограничения */
+    flex: none;           /* ✅ отменяет поведение flex */
+    display: block;       /* ✅ убирает возможные inline-артефакты */
+  }
 }
+/* ========================== */
 

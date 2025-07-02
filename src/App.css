@@ -1,15 +1,14 @@
 .section {
-  width: 1180px;
+  max-width: 1180px;      /* максимальная ширина */
+  width: 100%;            /* занимает всю доступную ширину */
   margin: 0 auto;
   position: relative;
+  padding: 0 20px;        /* добавь отступы, чтобы не прилипало к краям */
 }
 
-.section {
-  scroll-margin-top: 100px; 
-}
 
 .App{
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 

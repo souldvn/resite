@@ -52,29 +52,50 @@ const Main = () => {
     <div id="services" className="section">
       <div className={s.main}>
         <div className={s.carousel}>
-          <div className={s.title}>
-            <h2>{highlightTitle(current.title)}</h2>
-            <div className={s.change}>
-              <button
-                className={`${s.left} ${index === 0 ? s.disabled : ''}`}
-                onClick={prevSlide}
-                disabled={index === 0}
-              >
-                <img src="/icons/arrowleft.svg" alt="arrow left" />
-              </button>
-              <p>{index + 1} из {slides.length}</p>
-              <button
-                className={`${s.right} ${index === slides.length - 1 ? s.disabled : ''}`}
-                onClick={nextSlide}
-                disabled={index === slides.length - 1}
-              >
-                <img src="/icons/arrowright.svg" alt="arrow right" />
-              </button>
-            </div>
-          </div>
-          <div className={s.subtitle}>{current.subtitle}</div>
-          <button className={s.button}>Обсудить проект</button>
-        </div>
+  <div className={s.title}>
+    <h2>{highlightTitle(current.title)}</h2>
+    <div className={`${s.change} ${s.desktopOnly}`}>
+      <button
+        className={`${s.left} ${index === 0 ? s.disabled : ''}`}
+        onClick={prevSlide}
+        disabled={index === 0}
+      >
+        <img src="/icons/arrowleft.svg" alt="arrow left" />
+      </button>
+      <p>{index + 1} из {slides.length}</p>
+      <button
+        className={`${s.right} ${index === slides.length - 1 ? s.disabled : ''}`}
+        onClick={nextSlide}
+        disabled={index === slides.length - 1}
+      >
+        <img src="/icons/arrowright.svg" alt="arrow right" />
+      </button>
+    </div>
+  </div>
+
+  <div className={s.subtitle}>{current.subtitle}</div>
+  <button className={s.button}>Обсудить проект</button>
+
+  {/* Копия переключателей для мобилки */}
+  <div className={`${s.change} ${s.mobileOnly}`}>
+    <button
+      className={`${s.left} ${index === 0 ? s.disabled : ''}`}
+      onClick={prevSlide}
+      disabled={index === 0}
+    >
+      <img src="/icons/arrowleft.svg" alt="arrow left" />
+    </button>
+    <p>{index + 1} из {slides.length}</p>
+    <button
+      className={`${s.right} ${index === slides.length - 1 ? s.disabled : ''}`}
+      onClick={nextSlide}
+      disabled={index === slides.length - 1}
+    >
+      <img src="/icons/arrowright.svg" alt="arrow right" />
+    </button>
+  </div>
+</div>
+
         <div className={s.image}>
           <img src={current.image} alt="main" />
         </div>

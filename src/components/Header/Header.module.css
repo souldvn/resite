@@ -6,13 +6,12 @@
   z-index: 1000;
   transition: 1s ease, backdrop-filter 0.3s ease;
   height: 96px;
-  
 }
 
 .header.scrolled {
   background-color: rgba(20, 20, 20, 0.4);
-  backdrop-filter: blur(10px);             
-  -webkit-backdrop-filter: blur(10px);     
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
 
 .container {
@@ -23,27 +22,18 @@
   position: relative;
 }
 
-
 .ellipse {
   position: absolute;
-  top: -145vw; /* Подбери нужное значение */
+  top: -145vw;
   left: 50%;
   transform: translateX(-50%);
-   width: 100vw;
+  width: 100vw;
   height: 200vw;
   background: radial-gradient(circle, rgba(116, 83, 243, 0.8) 0%, rgba(116, 83, 243, 0) 100%);
   filter: blur(80px);
   z-index: 0;
   pointer-events: none;
 }
-
-
-/* .header.scrolled::before {
-  opacity: 1;
-} */
-
-
-
 
 .options ul {
   display: flex;
@@ -81,4 +71,134 @@
   background-color: #6C47C2;
 }
 
+.logo {
+  width: 55px;
+  height: 40px;
+}
 
+/* Общий стиль для бургер кнопки */
+.burgerBtn {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 52px;
+  height: 52px;
+  position: relative;
+  z-index: 1001;
+}
+
+/* Когда открыто меню — фиксируем крестик */
+.burgerBtnOpen {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+}
+
+/* Стилизуем крестик */
+.closeIcon {
+  font-size: 36px;
+  color: white;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Стилизуем изображение бургера */
+.burgerBtn img {
+  width: 52px;
+  height: 52px;
+  border: none;
+}
+
+/* Мобильное меню */
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background-color: #2B2D3C;
+  padding-top: 96px; /* чтобы логотип сверху не перекрывался */
+  z-index: 999;
+  padding: 31.55px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.mobileContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  /* padding: 40px 20px; */
+}
+
+.mobileContent ul {
+  list-style: none;
+  padding: 0;
+  margin: 26px 0 ;
+}
+
+.mobileContent li {
+  margin-bottom: 20px;
+  text-align: left;
+  font-size: 22px;
+  color: white;
+  font-weight: 400;
+}
+
+.mobileContent a {
+  font-size: 22px;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.mobileContent a:hover {
+  color: #895AF6;
+}
+
+/* Кнопка внизу меню */
+.mobileButton {
+  background-color: #895AF6;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 18px 69px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 0 auto 40px;
+  width: fit-content;
+}
+
+.mobileButton:hover {
+  background-color: #6C47C2;
+}
+
+.mobileLogo {
+  width: 55px;
+  height: 40px;
+  margin: 0 0 26px 0;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .options {
+    display: none;
+  }
+
+  .button {
+    display: none;
+  }
+
+  .burgerBtn {
+    display: block;
+  }
+}

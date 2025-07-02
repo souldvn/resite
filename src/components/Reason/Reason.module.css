@@ -20,23 +20,29 @@ h2{
 .cards {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 16px;
+  
 }
 
 .card {
-  max-width: 580px;
-  width: 100%; /* чтобы можно было адаптировать под max-width */
+  flex: 1 1 calc(50% - 16px); /* 2 в ряд с учетом gap */
+  max-width: 560px;
   background-color: #2B2C3C;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.card img {
+  width: 100%;           /* делает картинку на всю ширину карточки */
+  height: auto;          /* сохраняет пропорции */
+  display: block;        /* убирает нижние пробелы под изображением */
   border-radius: 20px 20px 0 0;
-
-  flex: 1 1 580px; /* важно для переноса и соблюдения max-width */
-    border-radius: 20px;
+  object-fit: cover;     /* обрезка по контейнеру — опционально */
 }
 
-.card img{
-    border-radius: 20px 20px 0 0; /* ← добавлено */
-}
 
 .exp{
     padding: 20px;
