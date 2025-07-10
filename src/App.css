@@ -4,6 +4,7 @@
   margin: 0 auto;
   position: relative;
   padding: 0 20px;        /* добавь отступы, чтобы не прилипало к краям */
+  box-sizing: border-box;
 }
 
 

@@ -322,6 +322,11 @@
     padding: 14px 24px;
   }
 
+  .file label{
+    width: 100%;
+    text-align: center;;
+  }
+
   .button {
     width: 100%;
     justify-content: center;

@@ -1,66 +1,123 @@
-.reason{
-    margin-top: 96px;
+.reason {
+  margin-top: 96px;
 }
 
-.reason h2{
-    margin-bottom: 40px;
+.reason h2 {
+  margin-bottom: 40px;
 }
 
-h2{
-    font-size: 38px;
-    line-height: 40px;
-    font-weight: 600;
+h2 {
+  font-size: 38px;
+  line-height: 40px;
+  font-weight: 600;
 }
 
-.highlight{
-    color: #895AF6;
-    
+.highlight {
+  color: #895AF6;
 }
 
-.cards {
+.cardsDesktop {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  
 }
 
 .card {
-  flex: 1 1 calc(50% - 16px); /* 2 в ряд с учетом gap */
+  flex: 1 1 calc(50% - 16px);
   max-width: 560px;
   background-color: #2B2C3C;
   border-radius: 20px;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
-
-
-.card img {
-  width: 100%;           /* делает картинку на всю ширину карточки */
-  height: auto;          /* сохраняет пропорции */
-  display: block;        /* убирает нижние пробелы под изображением */
+.card img,
+.cardMobile img {
+  width: 100%;
+  height: auto;
+  display: block;
   border-radius: 20px 20px 0 0;
-  object-fit: cover;     /* обрезка по контейнеру — опционально */
+  object-fit: cover;
 }
 
-
-.exp{
-    padding: 20px;
+.exp {
+  padding: 20px;
 }
 
-.exp p{
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 300;
+.exp p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
 }
 
-.exp h3{
-    font-size: 22px;
-    font-weight: 500;
-    margin-bottom: 16px;
+.exp h3 {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
 }
 
+/* Мобильный слайдер */
+.slider {
+  overflow: hidden;
+  width: 100%;
+  display: none;
+}
 
+.track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
 
+.cardMobile {
+  min-width: 100%;
+  background-color: #2B2C3C;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
 
+.pagination {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
 
+.dot {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #2B2C3C;
+  transition: all 0.3s ease;
+}
+
+.active {
+  width: 96px;
+  background-color: #895AF6;
+}
+
+.dot:not(.active) {
+  width: 20px;
+}
+
+/* Адаптация под мобилки */
+@media (max-width: 768px) {
+  .cardsDesktop {
+    display: none;
+  }
+
+  .slider {
+    display: block;
+  }
+
+  .pagination {
+    display: flex;
+  }
+
+  .cardMobile {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

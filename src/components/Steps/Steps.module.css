@@ -1,30 +1,25 @@
-.steps{
-    margin-top: 96px;
+.steps {
+  margin-top: 96px;
 }
 
-.steps h2{
-    margin-bottom: 40px;
-}
-h2{
-    font-size: 38px;
-    /* line-height: 40px; */
-    font-weight: 600;
+.steps h2 {
+  margin-bottom: 40px;
 }
 
-.highlight{
-    color: #895AF6;
-    
+h2 {
+  font-size: 38px;
+  font-weight: 600;
 }
 
-.cards {
+/* ===== Десктоп ===== */
+.cardsDesktop {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  
 }
 
 .card {
-  flex: 1 1 calc(50% - 16px); /* 2 в ряд с учетом gap */
+  flex: 1 1 calc(50% - 16px);
   max-width: 560px;
   background-color: #2B2C3C;
   border-radius: 20px;
@@ -32,28 +27,100 @@ h2{
   flex-direction: column;
 }
 
-.card img{
-    border-radius: 20px 20px 0 0; /* ← добавлено */
+.card img {
+  border-radius: 20px 20px 0 0;
+  width: 100%;
+}
+
+.exp {
+  padding: 20px;
+}
+
+.exp p {
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+.exp h3 {
+  font-size: 22px;
+  line-height: 40px;
+  font-weight: 500;
+}
+
+/* ===== Мобильный слайдер ===== */
+.sliderWrapper {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .cardsDesktop {
+    display: none;
+  }
+
+  .sliderWrapper {
+    display: block;
+  }
+
+  .sliderContainer {
+    overflow: hidden;
     width: 100%;
+    position: relative;
+  }
+
+  .slider {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+    will-change: transform;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+    background-color: #2B2C3C;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .slide img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+  }
+
+  .exp {
+    padding: 20px 16px 24px;
+  }
+
+  .exp h3 {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .exp p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 8px;
+  }
+
+  .dot {
+    height: 10px;
+    border-radius: 10px;
+    background-color: #2B2C3C;
+    transition: all 0.3s;
+    cursor: pointer;
+    width: 20px;
+  }
+
+  .active {
+    width: 96px;
+    background-color: #895AF6;
+  }
 }
-
-.exp{
-    padding: 20px;
-}
-
-.exp p{
-    font-size: 18px;
-    line-height: 28px;
-    font-weight: 300;
-}
-
-.exp h3{
-    font-size: 22px;
-    line-height: 40px;
-    font-weight: 500;
-}
-
-
-
-
-

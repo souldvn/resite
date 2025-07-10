@@ -73,4 +73,31 @@
 }
 
 
+@media (max-width: 768px) {
+  .top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+
+  
+
+  .links,
+  .docs {
+    width: 100%;
+  }
+
+  .bottom {
+    margin-top: 48px;
+    gap: 12px;
+  }
+
+  .bottom p {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+
+
 

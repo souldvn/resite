@@ -1,46 +1,46 @@
-.projects{
-    margin-top: 96px;
-    width: 100%;
+.projects {
+  margin-top: 96px;
+  width: 100%;
 }
 
-.projects h2{
-   margin-bottom: 32px;
+.projects h2 {
+  margin-bottom: 32px;
 }
 
-.cards{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    flex-wrap: wrap;
+.cardsDesktop {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.card{
-    background-color: #2B2C3C;
-    display: flex;
-    border-radius: 20px;
-}
-.card img{
-   border-radius: 0 20px 20px 0;
-   height: 100%;
+.card {
+  background-color: #2B2C3C;
+  display: flex;
+  border-radius: 20px;
 }
 
-.expgroup{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    max-width: 500px;
+.card img {
+  border-radius: 0 20px 20px 0;
+  height: 100%;
 }
 
-.exp{
-    background-color: #494A57;
-    color: #B6B7BC;
-    padding: 12px 16px;
-    border-radius: 20px;
+.expgroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  max-width: 500px;
 }
 
-.left{
-    padding: 20px;
-    display: flex;
+.exp {
+  background-color: #494A57;
+  color: #B6B7BC;
+  padding: 12px 16px;
+  border-radius: 20px;
+}
+
+.left {
+  padding: 20px;
+  display: flex;
   flex-direction: column;
 }
 
@@ -61,29 +61,28 @@
   font-weight: 400;
 }
 
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
 
-.button{
-    display: flex;
-    align-items: center;
-    background-color: #895AF6;
-    gap: 16px;
-    border: none;
-    border-radius: 10px;
-    padding: 14px 12px;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    font-size: 17px;
-    line-height: 28px;
-    
+.button {
+  display: flex;
+  align-items: center;
+  background-color: #895AF6;
+  gap: 16px;
+  border: none;
+  border-radius: 10px;
+  padding: 14px 12px;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 17px;
+  line-height: 28px;
 }
 
-.button:hover{
-    background-color: #6C47C2;
+.button:hover {
+  background-color: #6C47C2;
 }
 
 .buttonmore {
@@ -95,47 +94,95 @@ a{
   font-weight: 300;
   cursor: pointer;
   transition: background-color 0.3s;
-font-size: 17px;
-  display: block;       /* превращаем в блочный элемент */
-  margin: 32px auto 0;  /* отступ сверху и центрирование */
+  font-size: 17px;
+  display: block;
+  margin: 32px auto 0;
 }
 
-.buttonmore:hover{
-    background-color: #6C47C2;
+.buttonmore:hover {
+  background-color: #6C47C2;
 }
 
+/* Слайдер для мобилки */
+.slider {
+  display: none;
+  overflow: hidden;
+  width: 100%;
+}
 
-/* ===== Projects.module.css: desktop осталось как есть ===== */
+.track {
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
 
-/* …твой текущий код … */
+.cardMobile {
+  min-width: 100%;
+  background-color: #2B2C3C;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
 
-/* ===== Адаптив: до 768 px — карточка в колонку ===== */
+.cardMobile img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+/* Пагинация */
+.pagination {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.dot {
+  height: 10px;
+  border-radius: 10px;
+  background-color: #2B2C3C;
+  transition: all 0.3s ease;
+}
+
+.active {
+  width: 96px;
+  background-color: #895AF6;
+}
+
+.dot:not(.active) {
+  width: 20px;
+}
+
+/* Адаптив */
 @media (max-width: 768px) {
-
-  /* карточка становится вертикальной и порядок меняется */
-  .card {
-    flex-direction: column-reverse;   /* картинка сверху, текст ниже */
-    max-width: 100%;                  /* на всю ширину контейнера */
+  .cardsDesktop {
+    display: none;
   }
 
-  /* картинка теперь 100 % ширины и с верхними скруглениями */
-  .right img {
-    width: 100%;
-    height: auto;                     /* сохраняем пропорции */
-    border-radius: 20px 20px 0 0;
+  .buttonmore {
+    display: none;
   }
 
-  /* текстовый блок — обычная колонка, паддинги поменьше */
+  .slider {
+    display: block;
+  }
+
+  .pagination {
+    display: flex;
+  }
+
   .left {
     padding: 20px 16px 24px;
   }
 
-  /* группа тегов: чуть больше отступа снизу */
   .expgroup {
     margin-bottom: 20px;
   }
 
-  /* заголовок/описание — меньшие размеры для мобилы */
   .info h2 {
     font-size: 28px;
     line-height: 32px;
@@ -148,12 +195,11 @@ font-size: 17px;
     margin-bottom: 24px;
   }
 
-  /* кнопка «Показать ещё» — ширина 100 % по макету мобилы */
-  .buttonmore {
-    width: 100%;
+  .button {
+    font-size: 16px;
+  }
+  .button img {
+    width: 21px;
+    height: 21px;
   }
 }
-
-/* (по желанию) ещё один брейк‑пойнт, напр., 480px, чтобы
-   подогнать шрифты или отступы — добавляй аналогично */
-
