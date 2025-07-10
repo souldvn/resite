@@ -34,6 +34,9 @@ h2 {
 
 .exp {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .exp p {
@@ -57,6 +60,17 @@ h2 {
   .cardsDesktop {
     display: none;
   }
+
+  .steps {
+  margin-top: 40px;
+}
+
+  .steps h2 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+}
 
   .sliderWrapper {
     display: block;
@@ -94,8 +108,9 @@ h2 {
   }
 
   .exp h3 {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 18px;
+    line-height: 22px;
+    font-weight: 500;
   }
 
   .exp p {

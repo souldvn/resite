@@ -113,7 +113,7 @@ const Tell = () => {
               Прикрепить файл
               <input type="file" />
             </label>
-            <p>(PDF, PNG, JPG, DOCX до 50 мб)</p>
+            <p>(PDF, PNG, JPG, DOCX до 10 мб)</p>
           </div>
 
           <button

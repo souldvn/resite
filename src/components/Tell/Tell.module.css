@@ -276,7 +276,7 @@
 @media (max-width: 768px) {
   .tell {
     flex-direction: column;
-    margin-top: 64px;
+    margin-top: 40px;
   }
 
   .form {
@@ -285,8 +285,9 @@
   }
 
   .form h2 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
   }
 
   .fields {
@@ -300,6 +301,7 @@
     width: 100%;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 400;
   }
 
   .checkbox {
@@ -318,12 +320,19 @@
     margin-top: 24px;
   }
 
+   .file p {
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+  }
+
   .fileLabel {
     padding: 14px 24px;
   }
 
   .file label{
     width: 100%;
+    padding: 18px 68px;
     text-align: center;;
   }
 
@@ -331,11 +340,19 @@
     width: 100%;
     justify-content: center;
     padding: 16px;
-    margin-top: 24px;
+    margin-top: 16px;
   }
 
-  .contacts {
-    margin-top: 40px;
+  .contactInfo p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+  }
+
+  .contactForm p{
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
   }
 
   .contactInfo,
@@ -345,8 +362,9 @@
 
   .contactInfo h2,
   .contactForm h2 {
-    font-size: 24px;
-    line-height: 28px;
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 600;
   }
 
   .tg {

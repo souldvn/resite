@@ -56,11 +56,11 @@
 
 
 /* Эффект размытого эллипса под футером */
-.footer::after {
+/* .footer::after {
   content: '';
   position: absolute;
   top: -50vh;
-  /* bottom: -400vh; */
+
   left: 50%;
   transform: translateX(-50%);
   width: 110vw;
@@ -70,7 +70,8 @@
   z-index: -1;
   pointer-events: none;
   opacity: 1;
-}
+  overflow: hidden;
+} */
 
 
 @media (max-width: 768px) {
@@ -79,6 +80,18 @@
     align-items: flex-start;
     gap: 32px;
   }
+  .footer{
+    margin-top: 40px;
+    margin-bottom: 64px;
+    position: relative;
+    z-index: 1;
+
+}
+
+.logo{
+  width: 55px;
+  height: 40px;
+}
 
   
 
@@ -93,8 +106,8 @@
   }
 
   .bottom p {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 

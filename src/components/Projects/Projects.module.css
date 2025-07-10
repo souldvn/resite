@@ -163,6 +163,36 @@ a {
     display: none;
   }
 
+  .projects {
+  margin-top: 40px;
+  width: 100%;
+}
+  .projects h2 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.exp {
+  background-color: #494A57;
+  color: #B6B7BC;
+  padding: 5px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+}
+
+.expgroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: 500px;
+}
+
+
+
   .buttonmore {
     display: none;
   }
@@ -184,19 +214,23 @@ a {
   }
 
   .info h2 {
-    font-size: 28px;
-    line-height: 32px;
+    font-size: 20px;
+    line-height: 24px;
     margin-bottom: 12px;
+    font-weight: 600;
   }
 
   .info p {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 24px;
+    font-weight: 400;
   }
 
   .button {
     font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
   }
   .button img {
     width: 21px;

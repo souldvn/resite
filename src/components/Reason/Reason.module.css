@@ -108,6 +108,16 @@ h2 {
     display: none;
   }
 
+  .reason {
+  margin-top: 40px;
+}
+  .reason h2 {
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
   .slider {
     display: block;
   }
@@ -120,4 +130,17 @@ h2 {
     width: 100%;
     box-sizing: border-box;
   }
+
+  .exp p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+}
+
+.exp h3 {
+  font-size: 18px;
+  line-height: 22px;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
 }

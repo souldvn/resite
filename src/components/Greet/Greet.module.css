@@ -54,16 +54,20 @@ h1 {
 @media (max-width: 768px) {
   h1 {
     font-size: 22px;
-    line-height: 30px;
+    line-height: 26px;
+    font-weight: 700;
   }
 
   .text {
     font-size: 16px;
     line-height: 24px;
+    font-weight: 300;
   }
 
   .button {
     font-size: 16px;
     padding: 18px 69px;
+    line-height: 24px;
+    font-weight: 400;
   }
 }
