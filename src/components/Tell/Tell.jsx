@@ -132,7 +132,6 @@ const Tell = () => {
             <h2>Контакты</h2>
             <p>+7 999 757-04-99</p>
             <p>redigital.agency@gmail.com</p>
-            <p>redigital.agency@yandex.ru</p>
           </div>
 
           <div className={s.contactForm}>
