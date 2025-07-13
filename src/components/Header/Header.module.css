@@ -120,8 +120,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 80vh;
-  background-color: #2B2D3C;
+  height: auto;
+  background-color: #080A1C;
   padding-top: 96px; /* чтобы логотип сверху не перекрывался */
   z-index: 999;
   padding: 31.55px 20px;
@@ -133,7 +133,7 @@
 .mobileContent {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   height: 100%;
   width: 100%;
   /* padding: 40px 20px; */
@@ -142,11 +142,11 @@
 .mobileContent ul {
   list-style: none;
   padding: 0;
-  margin: 26px 0 ;
+  /* margin: 24px 0 ; */
 }
 
 .mobileContent li {
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   text-align: left;
   font-size: 22px;
   color: white;
@@ -174,9 +174,17 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  margin: 0 auto 40px;
   width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
 }
+
+/* .mobileContent a:last-child{
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+} */
 
 .mobileButton:hover {
   background-color: #6C47C2;

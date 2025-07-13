@@ -12,14 +12,14 @@ const allCards = [
   {
     title: "SmartSpend AI",
     desc: "Финансовый трекер и консультант с искусственным интеллектом для учёта расходов и накоплений.",
-    tags: ["Дизайн и проектирование", "Финансовый трекер", "Искусственный интеллект"],
+    tags: ["Дизайн и проектирование", "Финансовый трекер", "Инструменты"],
     link: "https://smartspend.ai",
     image: "/images/smartspendai.jpg",
   },
   {
     title: "Zodiacus",
     desc: "Гороскопы, игры и помощник с искусственным интеллектом для вашего знака зодиака",
-    tags: ["Дизайн и проектирование", "Искусственный интеллект", "Игры"],
+    tags: ["Дизайн и проектирование", "Инструменты", "Игры"],
     link: "#",
     image: "/images/zodiacus.jpg",
   },
@@ -68,13 +68,20 @@ const Projects = () => {
               <div className={s.left}>
                 <div className={s.expgroup}>
                   {card.tags.map((tag, i) => (
-                    <div className={s.exp} key={i}>{tag}</div>
+                    <div className={s.exp} key={i}>
+                      {tag}
+                    </div>
                   ))}
                 </div>
                 <div className={s.info}>
                   <h2>{card.title}</h2>
                   <p>{card.desc}</p>
-                  <a href={card.link} target="_blank" rel="noopener noreferrer" className={s.link}>
+                  <a
+                    href={card.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={s.link}
+                  >
                     <button className={s.button}>
                       Смотреть кейс <img src="/icons/link.svg" alt="arrow" />
                     </button>
@@ -109,14 +116,25 @@ const Projects = () => {
                 <img src={card.image} alt={card.title} />
                 <div className={s.left}>
                   <div className={s.expgroup}>
-                    {card.tags.map((tag, i) => (
-                      <div className={s.exp} key={i}>{tag}</div>
-                    ))}
+                    {card.tags
+                      .filter((tag) => tag !== "Дизайн и проектирование")
+                      .map((tag, i) => (
+                        <div className={s.exp} key={i}>
+                          {tag}
+                        </div>
+                      ))}
                   </div>
                   <div className={s.info}>
-                    <h2>{card.title}</h2>
-                    <p>{card.desc}</p>
-                    <a href={card.link} target="_blank" rel="noopener noreferrer" className={s.link}>
+                    <div className={s.text}>
+                      <h2>{card.title}</h2>
+                      <p>{card.desc}</p>
+                    </div>
+                    <a
+                      href={card.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={s.link}
+                    >
                       <button className={s.button}>
                         Смотреть кейс <img src="/icons/link.svg" alt="arrow" />
                       </button>
@@ -133,7 +151,7 @@ const Projects = () => {
           {allCards.map((_, index) => (
             <div
               key={index}
-              className={`${s.dot} ${index === currentSlide ? s.active : ''}`}
+              className={`${s.dot} ${index === currentSlide ? s.active : ""}`}
             ></div>
           ))}
         </div>
