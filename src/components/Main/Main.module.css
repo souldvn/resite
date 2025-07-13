@@ -153,10 +153,8 @@
 /* --- Адаптив --- */
 @media (max-width: 768px) {
   .main {
-    height: auto;
-    min-height: 100vh; /* чтобы было пространство для контента + кнопки */
-    position: relative;
-    padding-bottom: 100px;
+    height: 650px;
+    flex-direction: column;
   }
 
   .carousel {
@@ -182,18 +180,18 @@
     line-height: 24px;
     max-width: 100%;
     font-weight: 400;
+    margin-bottom: auto;
   }
 
   .button {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    margin: 0;
-    /* width: auto; */
-    padding: 16px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     font-size: 16px;
     line-height: 24px;
+    font-weight: 400;
+    padding: 18px 69px;
+    margin: 32px auto 20px auto;
   }
 
   .change {
