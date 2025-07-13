@@ -9,7 +9,7 @@ const Greet = () => {
           Разработка и продвижение <span className={s.highlight}>Telegram Mini Apps</span> под ключ
         </h1>
         <p className={s.text}>Создаём современные IT решения с упором на качество, которые приносят прибыль</p>
-        <button className={s.button}>Обсудить проект</button>
+        <a href="#contacts"><button className={s.button}>Обсудить проект</button></a>
       </div>
     </div>
   )

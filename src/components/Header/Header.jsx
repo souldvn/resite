@@ -19,7 +19,7 @@ const Header = () => {
       <header className={`${s.header} ${scrolled ? s.scrolled : ""}`}>
         <div className="section">
           <div className={s.container}>
-            <img src="/icons/logo.svg" alt="logo" className={s.logo} />
+            <a href="#home"><img src="/icons/logo.svg" alt="logo" className={s.logo} /></a>
             <nav className={s.options}>
               <ul>
                 <li><a href="#home">Главная</a></li>
@@ -29,7 +29,7 @@ const Header = () => {
                 <li><a href="#contacts">Контакты</a></li>
               </ul>
             </nav>
-            <button className={s.button}>Связаться с нами</button>
+            <a href="#contacts"><button className={s.button}>Связаться с нами</button></a>
 
             {/* Бургер / Крестик */}
             <button
@@ -56,7 +56,7 @@ const Header = () => {
         <li><a href="#faq" onClick={() => setMenuOpen(false)}>FAQ</a></li>
         <li><a href="#contacts" onClick={() => setMenuOpen(false)}>Контакты</a></li>
       </ul>
-      <button className={s.mobileButton}>Обсудить проект</button>
+      <a href="#contacts"><button className={s.mobileButton}>Обсудить проект</button></a>
     </div>
   </div>
 )}

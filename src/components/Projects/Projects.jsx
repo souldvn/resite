@@ -6,7 +6,7 @@ const allCards = [
     title: "SUN VILLrest",
     desc: "Бронирование столика и онлайн доставка из ресторана курортного парк-отеля",
     tags: ["Дизайн и проектирование", "Интернет магазин", "HoReCa"],
-    link: "https://sunvillrest.com",
+    link: "https://t.me/sunvillrest_bot",
     image: "/images/sunvillrest.jpg",
   },
   {

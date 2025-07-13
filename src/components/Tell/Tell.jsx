@@ -141,9 +141,10 @@ const Tell = () => {
               Оставьте заявку — ответим вам в ближайшее время и предложим
               решение на бесплатной консультации
             </p>
-            <button className={s.tg}>
+            <a href="https://t.me/redigitalmanager"><button className={s.tg}>
               Связаться с нами <img src="/icons/tg.svg" alt="telegram" />
             </button>
+            </a>
           </div>
         </div>
       </div>
