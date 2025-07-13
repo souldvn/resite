@@ -109,7 +109,7 @@ const Main = () => {
             </div>
           </div>
           <div className={s.subtitle}>{current.subtitle}</div>
-          <a href="#contacts">
+          <a className={s.link} href="#contacts">
             <button className={s.button}>Обсудить проект</button>
           </a>
         </div>

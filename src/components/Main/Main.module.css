@@ -153,7 +153,7 @@
 /* --- Адаптив --- */
 @media (max-width: 768px) {
   .main {
-    height: 680px;
+    height: 700px;
     flex-direction: column;
   }
 
@@ -191,7 +191,7 @@
     line-height: 24px;
     font-weight: 400;
     padding: 18px 69px;
-    margin: 32px auto 20px auto;
+    margin: 0 auto 20px auto;
   }
 
   .change {
@@ -224,6 +224,7 @@
     object-fit: cover;
     border-radius: 0;
   }
+
 
   .pagination {
     display: flex;
