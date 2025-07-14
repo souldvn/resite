@@ -6,19 +6,19 @@ const Footer = () => {
         
       <div className={s.footer}>
         <div className={s.top}>
-          <img className={s.logo} src="/icons/logo.svg" alt="logo"></img>
+          <a href="#home"><img className={s.logo} src="/icons/logo.svg" alt="logo"></img></a>
           <div className={s.links}>
             <div className={s.column}>
               <p>Ссылки</p>
               <ul className={s.opt}>
                 <li>
-                  <a href="#d">Обсудить партнёрство</a>
+                  <a href="https://t.me/redigitalmanager">Обсудить партнёрство</a>
                 </li>
                 <li>
                   <a href="#d">Вакансии</a>
                 </li>
                 <li>
-                  <a href="#p">Telegram канал про Telegram Mini Apps</a>
+                  <a href="https://t.me/redigitalapps">Telegram канал про Telegram Mini Apps</a>
                 </li>
               </ul>
             </div>

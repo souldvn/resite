@@ -34,14 +34,77 @@ const Tell = () => {
 
   const showErrors = !isValid() && touched;
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!isValid()) {
-      setTouched(true); // показать ошибки
-    } else {
-      alert("Форма отправлена!");
+  const handleSubmit = async (e) => {
+  e.preventDefault();
+  if (!isValid()) {
+    setTouched(true);
+    return;
+  }
+
+  const botToken = "8027920943:AAH7RQXodcyjss7husI10Bc_Ng9UnUiku5c";
+  const chatId = "-1002746364942";
+
+  const fileInput = document.querySelector('input[type="file"]');
+  const file = fileInput?.files[0];
+
+  try {
+    // 1. Отправить текстовое сообщение
+    const message = `📩 Новая заявка:\n👤 Имя: ${form.name}\n📱 Telegram: ${form.telegram}\n📞 Телефон: ${form.phone}\n📧 Email: ${form.email}`;
+
+    const textResponse = await fetch(
+      `https://api.telegram.org/bot${botToken}/sendMessage`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: message,
+        }),
+      }
+    );
+
+    if (!textResponse.ok) {
+      throw new Error("Ошибка при отправке текста");
     }
-  };
+
+    // 2. Если есть файл — отправить его отдельно
+    if (file) {
+      const formData = new FormData();
+      formData.append("chat_id", chatId);
+      formData.append("document", file);
+
+      const fileResponse = await fetch(
+        `https://api.telegram.org/bot${botToken}/sendDocument`,
+        {
+          method: "POST",
+          body: formData,
+        }
+      );
+
+      if (!fileResponse.ok) {
+        throw new Error("Ошибка при отправке файла");
+      }
+    }
+
+    alert("✅ Заявка успешно отправлена!");
+    setForm({
+      name: "",
+      telegram: "",
+      phone: "",
+      email: "",
+      agreePrivacy: false,
+      agreeTelegram: false,
+    });
+    fileInput.value = "";
+    setTouched(false);
+  } catch (error) {
+    console.error("Ошибка отправки:", error);
+    alert("❌ Ошибка при отправке. Попробуйте позже.");
+  }
+};
+
 
   return (
     <div className="section" id="contacts">
@@ -140,9 +203,10 @@ const Tell = () => {
               Оставьте заявку — ответим вам в ближайшее время и предложим
               решение на бесплатной консультации
             </p>
-            <a href="https://t.me/redigitalmanager"><button className={s.tg}>
-              Связаться с нами <img src="/icons/tg.svg" alt="telegram" />
-            </button>
+            <a href="https://t.me/redigitalmanager">
+              <button className={s.tg}>
+                Связаться с нами <img src="/icons/tg.svg" alt="telegram" />
+              </button>
             </a>
           </div>
         </div>

@@ -180,7 +180,8 @@
 }
 
 .contactInfo h2 {
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
+  margin-bottom: 70px;
 }
 
 .contactInfo p {
