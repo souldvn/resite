@@ -5,10 +5,10 @@
   flex-direction: column;
   border-radius: 20px;
   padding: 40px;
-  max-width: 1180px;   /* <-- ограничение по ширине */
+  max-width: 1180px;  
   margin-left: auto;
   margin-right: auto;
-  box-sizing: border-box; /* важно */
+  box-sizing: border-box; 
 }
 
 .auto h2 {
@@ -48,13 +48,13 @@
   display: flex;
   gap: 16px;
   margin-top: 40px;
-  flex-wrap: wrap; /* <-- теперь не вылезут */
+  flex-wrap: wrap; 
 }
 
 .img img {
   border-radius: 20px;
-  flex: 1 1 0;         /* <-- позволяет им занимать равное пространство */
-  max-width: calc(50% - 8px); /* <-- две картинки в строку с отступом */
+  flex: 1 1 0;        
+  max-width: calc(50% - 8px); 
   width: 100%;
   height: auto;
   box-sizing: border-box;
@@ -62,7 +62,6 @@
 
 
 /* ========================== */
-/* 📱 Адаптив для мобилы ↓↓↓ */
 @media (max-width: 768px) {
   .auto {
     padding: 24px 16px;
@@ -99,9 +98,9 @@
 
   .img img {
     width: 100%;
-    max-width: 100%;      /* ✅ убирает ограничения */
-    flex: none;           /* ✅ отменяет поведение flex */
-    display: block;       /* ✅ убирает возможные inline-артефакты */
+    max-width: 100%;      
+    flex: none;          
+    display: block;      
   }
 }
 /* ========================== */
