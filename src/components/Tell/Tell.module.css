@@ -32,13 +32,13 @@
 .fields {
     margin-top: 32px;
     display: flex;
-    flex-wrap: wrap; /* позволяет перенос строк */
+    flex-wrap: wrap; 
     gap: 16px;
     margin-bottom: 32px;
 }
 
 .fields input {
-    flex: 1 1 calc(50% - 8px); /* 2 в ряд с отступами */
+    flex: 1 1 calc(50% - 8px); 
     background-color: #2E2E42;
     border: 1px solid #444;
     padding: 14px;
@@ -89,7 +89,6 @@
 .allow {
   display: flex;
   align-items: center;
-  /* align-items: flex-start; */
   gap: 12px;
   font-size: 14px;
   color: white;
@@ -155,7 +154,7 @@
 }
 
 .fileLabel input[type="file"] {
-  display: none; /* скрываем стандартную кнопку */
+  display: none; 
 }
 
 
