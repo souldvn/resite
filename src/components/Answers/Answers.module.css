@@ -46,7 +46,7 @@
 }
 
 .open .answerWrapper {
-  max-height: 500px; /* Достаточно для длинного текста */
+  max-height: 500px; 
   transform: translateY(0);
   opacity: 1;
   margin-top: 16px;
