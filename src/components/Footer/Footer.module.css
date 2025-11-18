@@ -14,13 +14,13 @@
     align-items: flex-start;
 }
 
-/* Заголовки внутри колонок — серые */
+
 .column p {
   margin-bottom: 16px;
-  color: #B0AFBD; /* или другой серый по твоему дизайну */
+  color: #B0AFBD; 
 }
 
-/* Убираем точки у списка и отступы */
+
 .opt {
   display: flex;
   flex-direction: column;
@@ -30,14 +30,14 @@
   margin: 0;
 }
 
-/* Убираем синие подчеркивания у ссылок и настраиваем цвет */
+
 .opt a {
   text-decoration: none;
-  color: white; /* можешь заменить на нужный цвет */
+  color: white;
   transition: color 0.3s;
 }
 
-/* Добавим эффект при наведении */
+
 .opt a:hover {
   color: #895AF6;
 }
@@ -55,7 +55,7 @@
 }
 
 
-/* Эффект размытого эллипса под футером */
+
 /* .footer::after {
   content: '';
   position: absolute;
